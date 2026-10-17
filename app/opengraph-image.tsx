@@ -1,6 +1,5 @@
 import { ImageResponse } from "next/og";
 
-export const runtime = "edge";
 export const alt = "TACSTEM TACTICAL ANALYSIS, SIMPLIFIED.";
 export const size = {
   width: 1200,
@@ -253,19 +252,19 @@ export default async function Image() {
           }}
         >
           <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-            <span style={{ color: "#c9f73c", fontSize: "16px" }}>●</span>
+            <div style={{ width: "10px", height: "10px", borderRadius: "50%", backgroundColor: "#c9f73c" }} />
             <span style={{ color: "#fff", fontSize: "14px", fontWeight: 600 }}>
               Zero Cloud Upload Lag
             </span>
           </div>
           <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-            <span style={{ color: "#c9f73c", fontSize: "16px" }}>●</span>
+            <div style={{ width: "10px", height: "10px", borderRadius: "50%", backgroundColor: "#c9f73c" }} />
             <span style={{ color: "#fff", fontSize: "14px", fontWeight: 600 }}>
               Broadcast Telestration
             </span>
           </div>
           <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-            <span style={{ color: "#c9f73c", fontSize: "16px" }}>●</span>
+            <div style={{ width: "10px", height: "10px", borderRadius: "50%", backgroundColor: "#c9f73c" }} />
             <span style={{ color: "#fff", fontSize: "14px", fontWeight: 600 }}>
               Flat €10 / Month
             </span>

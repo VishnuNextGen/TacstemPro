@@ -88,6 +88,18 @@ Verified from the repository manifests and source files:
 | `npm run lint` | Runs ESLint across the project. |
 | `npm run clean` | Runs the configured Next.js clean command. |
 
+## Deployment to Netlify
+
+The repository includes a ready-to-use `netlify.toml` and `@netlify/plugin-nextjs` integration configured for Next.js 15:
+
+- **Build command**: `npm run build`
+- **Publish directory**: `.next`
+- **Netlify Plugin**: `@netlify/plugin-nextjs`
+- **Environment variables**:
+  - `APP_URL`: Set to your production domain (e.g. `https://tacstem.com` or your Netlify subdomain `https://your-site.netlify.app`)
+
+If you are importing via Netlify Git UI, Netlify will automatically detect `netlify.toml` and configure the OpenNext runtime without triggering a 404 "Page not found" error.
+
 ## Usage guide
 
 1. Start the app locally and open the home page to explore the product overview and telestration demo.

@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next';
+import Script from 'next/script';
 import './globals.css';
 import { JsonLd } from '@/components/seo/JsonLd';
 
@@ -94,6 +95,19 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <head>
         <JsonLd includeGlobal={true} />
+        <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-DKPV9D3SLK"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-DKPV9D3SLK');
+          `}
+        </Script>
       </head>
       <body suppressHydrationWarning className="bg-background text-foreground min-h-screen selection:bg-primary selection:text-primary-foreground overflow-x-hidden antialiased">
         {children}

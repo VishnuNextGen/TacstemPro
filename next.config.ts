@@ -25,7 +25,9 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  output: 'standalone',
+  // output: 'standalone' causes 404 "Page Not Found" on Netlify because it places server files in .next/standalone.
+  // Standard output is required for Netlify OpenNext runtime (@netlify/plugin-nextjs).
+  ...(process.env.BUILD_STANDALONE === 'true' ? { output: 'standalone' as const } : {}),
   transpilePackages: ['motion'],
   async redirects() {
     return [
